@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="IT Control Room - gestion et suivi du parc informatique">
+  <title>IT Control Room | Parc informatique</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="public-root"></div>
+  <div id="app-shell" class="app-shell is-hidden">
+    <aside class="sidebar" id="sidebar">
+      <div class="brand">
+        <div class="brand-mark">✦</div>
+        <div><strong>IT Control</strong><span>Room</span></div>
+      </div>
+      <div class="workspace-label">ESPACE DE TRAVAIL</div>
+      <nav class="main-nav" id="main-nav" aria-label="Navigation principale"></nav>
+      <div class="sidebar-footer">
+        <div class="support-card"><span class="support-pulse"></span><div><b>Système opérationnel</b><small>Dernière synchro à l'instant</small></div></div>
+        <button class="user-card" id="user-menu" type="button"><span class="avatar" id="user-avatar">AD</span><span><b id="user-name">Admin Direction</b><small id="user-role">Administrateur</small></span><span class="more">•••</span></button>
+      </div>
+    </aside>
+    <main class="main-content">
+      <header class="topbar">
+        <button class="icon-button menu-toggle" id="menu-toggle" aria-label="Ouvrir le menu">☰</button>
+        <div class="breadcrumbs"><span id="breadcrumb-root">Vue générale</span><span class="crumb-separator">/</span><strong id="breadcrumb-current">Dashboard</strong></div>
+        <div class="topbar-actions"><button class="icon-button" id="notification-button" aria-label="Notifications">♧<i></i></button><button class="logout-button" id="logout-button" type="button">Se déconnecter</button></div>
+      </header>
+      <div id="view-container" class="view-container"></div>
+    </main>
+  </div>
+  <div id="modal-root"></div>
+  <div id="toast-root" class="toast-root" aria-live="polite"></div>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="supabase-config.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
